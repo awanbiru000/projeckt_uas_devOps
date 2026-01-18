@@ -25,4 +25,4 @@ jobs:
         file: ./Dockerfile
         push: true
         # UBAH BARIS DI BAWAH INI:
-        tags: awanbirunsiran000/uas-devops:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/uas-devops:latest
