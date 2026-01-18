@@ -16,7 +16,7 @@ spec:
       containers:
       - name: uas-backend-container
         # GANTI dengan username Docker Hub kamu
-        image: junaldo/uas-devops:latest
+        image: awanbirunsiran000/uas-projeckt-devops:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

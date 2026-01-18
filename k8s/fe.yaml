@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: diabetes-fe
+  name: uas-backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: diabetes-fe
+      app: uas-backend
   template:
     metadata:
       labels:
-        app: diabetes-fe
+        app: uas-backend
     spec:
       containers:
-      - name: diabetes-app
-        image: diabetes-app:latest  # ← SAMA DENGAN BACKEND!
+      - name: uas-backend-container
+        image: awanbirunsiran000/uas-projeckt-devops:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: diabetes-fe-service
+  name: uas-fe-service 
 spec:
   selector:
-    app: diabetes-fe
+    app: uas-fe
   ports:
   - port: 8080
     targetPort: 5000
